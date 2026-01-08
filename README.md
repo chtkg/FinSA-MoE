@@ -67,7 +67,7 @@ This will generate a LoRA fine-tuned model. After fine-tuning FinSA-MoE on the F
 ## MoE Joint Training
 First, merge the sub-models fine-tuned with LoRA by running the following command:
 ```bash
-python scripts/merge_expert_lora.py    # 会生成MoE初始模型
+python scripts/merge_expert_lora.py    # generates the initial MoE model
 ```
 A router is introduced to enable the FinSA-MoE framework to automatically select appropriate experts. We mix the training, validation, and test sets of the news and forum datasets for joint training, and use domain labels as supervision signals (dataset field: domain).
 During the first 500 steps, all parameters of the news and forum experts from the single-expert fine-tuning stage are frozen, and only the router and classification head are trained. Subsequently, all expert LoRA parameters are unfrozen and jointly trained with the router. The router parameters and the two LoRA expert parameters are updated together via backpropagation. <br>

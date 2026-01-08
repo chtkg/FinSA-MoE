@@ -61,7 +61,7 @@ python scripts/train_news_expert.py    # 也可以使用train_forum_expert.py，
   <img src="./img/FinSA-MoE vs. Baselines on the FinNF Forum Test Set.png" width="600"/>
 </p>
 <p align="center">
-  图 3  FinSA-MoE vs. Baselines在FinNF股评测试集上的表现
+  图 4  FinSA-MoE vs. Baselines在FinNF股评测试集上的表现
 </p>
 
 ## MoE联合训练
@@ -75,11 +75,23 @@ python scripts/merge_expert_lora.py    # 会生成MoE初始模型
 python scripts/train_joint_moe.py   # 会生成仅训练Router和分类头的模型：router_warmup；和最终模型：moe_joint
 ```
 
-## 评估
-运行如下代码：
+## 评估和推理
+运行如下代码评估模型性能：
 ```bash
 python scripts/evaluate.py --model_path 模型路径 --dataset_type news --data_path 数据集路径
 ```
+使用FinSA-MoE/main.py可以进行推理，也可以使用FinSA-MoE/src/inference.py进行推理
+```bash
+python main.py --mode inference --data_type forum --model_path 模型路径
+python src/inference.py
+```
+<p align="center">
+  <img src="./img/inference.png" width="600"/>
+</p>
+<p align="center">
+  图 5 推理
+</p>
+
 
 
 

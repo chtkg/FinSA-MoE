@@ -1,0 +1,44 @@
+# 基础模型配置
+model:
+  name: "/home/pc/WorkSpace/liutao/FinSA-MoE/models/GLM-Z1-9B"  # 本地模型路径
+  num_labels: 3   # 3分类任务
+
+# LoRA配置
+lora:
+  r: 16  # LoRA的秩（rank），决定低秩分解矩阵的维度，越大表示能力越强但参数越多
+  lora_alpha: 16   # LoRA的缩放因子，用于调节LoRA层输出的强度（实际缩放系数=alpha/r）
+  lora_dropout: 0.05  # LoRA层的dropout率，5%的概率随机丢弃，防止过拟合
+  target_modules:
+    - "q_proj"
+    - "v_proj"
+    - "o_proj"
+    - "gate_up_proj"
+    - "down_proj"
+  bias: "none"    # 不对偏置项进行训练，只训练权重矩阵
+  task_type: "SEQ_CLS"    # 任务类型为序列分类
+
+# 4-bit量化配置
+quantization:
+  load_in_4bit: true   # 启用4比特量化，将模型压缩到原来的1/4大小
+  bnb_4bit_use_double_quant: true   # 双重量化，对量化常数也进行量化，进一步节省内存
+  bnb_4bit_quant_type: "nf4"   # 使用NF4（NormalFloat4）量化格式，专为神经网络优化的4-bit格式
+  bnb_4bit_compute_dtype: "bfloat16"   # 计算时使用bfloat16精度，平衡精度和效率
+
+# 训练参数
+training:
+  num_epochs: 3   # 训练3个完整的epoch
+  learning_rate: 3e-4   # 学习率0.0003
+  warmup_steps: 500    # 前500步进行学习率预热
+  per_device_batch_size: 16   
+  gradient_accumulation_steps: 1    # 梯度累积16步，实际批次大小=1×16=16
+  max_length: 512    # 输入序列的最大长度为1024个token
+  save_steps: 500    # 每500步保存一次模型
+  eval_steps: 500    # 每500步在验证集上评估一次
+  logging_steps: 10    # 每10步记录一次训练日志
+  save_total_limit: 12   # 最多保存3个检查点，自动删除旧的
+  early_stopping_patience: 12   # 连续12次评估没有改善就提前停止
+  seed: 13    # 随机种子
+
+moe:
+  router_warmup_steps: 500   # 预热的 step 数
+

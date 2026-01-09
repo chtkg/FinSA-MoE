@@ -50,19 +50,8 @@ Run the following command:
 ```bash
 python scripts/train_news_expert.py    # you can also use train_forum_expert.py; the two files are identical
 ```
-This will generate a LoRA fine-tuned model. After fine-tuning FinSA-MoE on the FinNF news and forum datasets, the performance on the test sets is shown in Figures 3 and 4, respectively.
-<p align="center">
-  <img src="./img/FinSA-MoE vs. Baselines on the FinNF News Test Set.png" width="600"/>
-</p>
-<p align="center">
-  Figure 3  Performance of FinSA-MoE vs. baselines on the FinNF news test set
-</p>
-<p align="center">
-  <img src="./img/FinSA-MoE vs. Baselines on the FinNF Forum Test Set.png" width="600"/>
-</p>
-<p align="center">
-  Figure 4  Performance of FinSA-MoE vs. baselines on the FinNF forum test set
-</p>
+This will generate a LoRA fine-tuned model. 
+
 
 ## MoE Joint Training
 First, merge the sub-models fine-tuned with LoRA by running the following command:

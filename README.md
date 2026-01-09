@@ -79,6 +79,6 @@ python src/inference.py
   <img src="./img/inference.png" width="600"/>
 </p>
 <p align="center">
-  Figure 5 Inference
+  Figure 3 Inference
 </p
 

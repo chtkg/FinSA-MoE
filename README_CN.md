@@ -50,19 +50,7 @@ pip install -r requirements.txt   # 安装库
 ```bash
 python scripts/train_news_expert.py    # 也可以使用train_forum_expert.py，这两个文件一样
 ```
-会生成LoRA微调后的模型，FinSA-MoE经过FinNF新闻和股评数据集微调后，分别在测试集上的表现如图3、4所示：
-<p align="center">
-  <img src="./img/FinSA-MoE vs. Baselines on the FinNF News Test Set.png" width="600"/>
-</p>
-<p align="center">
-  图 3  FinSA-MoE vs. Baselines在FinNF新闻测试集上的表现
-</p>
-<p align="center">
-  <img src="./img/FinSA-MoE vs. Baselines on the FinNF Forum Test Set.png" width="600"/>
-</p>
-<p align="center">
-  图 4  FinSA-MoE vs. Baselines在FinNF股评测试集上的表现
-</p>
+会生成LoRA微调后的模型。
 
 ## MoE联合训练
 首先合并经过LoRA微调后的几个子模型，运行如下代码：
@@ -89,7 +77,7 @@ python src/inference.py
   <img src="./img/inference.png" width="600"/>
 </p>
 <p align="center">
-  图 5 推理
+  图 3 推理
 </p>
 
 

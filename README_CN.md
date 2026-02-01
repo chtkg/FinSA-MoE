@@ -8,7 +8,7 @@ FinSA-MoE（Financial Sentiment Analysis Mixture-of-Experts，金融情感分析
   <img src="./img/FinSA-MoE.svg" width="600"/>
 </p>
 <p align="center">
-  图 1  FinSA-MoE 整体框架
+  图 1  所提出的 FinSA-MoE 框架的整体架构。（a）一个冻结的、基于 Transformer 的主干模型将金融文本编码为共享的语义表示；（b）专家混合（MoE）路由器基于句子级特征，动态分配领域特定的专家；（c）每个被选中的专家均采用LoRA 适配器进行单专家微调，以捕捉金融新闻和股票评论中的情感模式。
 </p>
 
 

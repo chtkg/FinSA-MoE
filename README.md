@@ -1,13 +1,13 @@
 English | [简体中文](./README_CN.md)
-# FinSA-MoE：A Parameter-Efficient Mixture-of-Experts Framework for Cross-Domain Chinese Financial Sentiment Analysis
+# Adaptive Expert Specialization for Financial Sentiment Analysis under Domain Heterogeneity
 
 ## Overall Framework
-FinSA-MoE (Financial Sentiment Analysis–Mixture-of-Experts) is a parameter-efficient Mixture-of-Experts framework designed for cross-domain Chinese financial sentiment analysis, as shown in Figure 1. The framework constructs domain experts for financial news and stock forum comments by applying LoRA fine-tuning to the GLM-Z1-9B model, and introduces a Mixture-of-Experts (MoE) architecture to adaptively select experts, enabling efficient generalization across domains.Meanwhile, we construct the FinNF dataset, which contains 1.66 million high-quality Chinese financial news and stock forum texts annotated with sentiment polarity, providing a solid data foundation for fine-tuning and evaluation of the FinSA-MoE framework. Experimental results demonstrate that FinSA-MoE significantly outperforms traditional deep learning models and existing financial large language models in terms of accuracy, precision, recall, and F1-score, and exhibits stronger robustness and generalization capability on high-noise and semantically ambiguous texts.
+FinSA-MoE (Financial Sentiment Analysis Mixture-of-Experts), a parameter-efficient adaptive expert specialization framework designed to address domain heterogeneity in financial sentiment analysis(see Fig.1). FinSA-MoE constructs domain-specific experts via Low-Rank Adaptation (LoRA) on a shared backbone model and employs a Mixture-of-Experts (MoE) architecture to enable adaptive expert selection across heterogeneous financial text sources. We also introduce the FinNF, a large-scale Chinese financial sentiment dataset consisting of 1.66 million financial news articles and stock commentary annotated with sentiment polarity.This dataset provides a comprehensive benchmark for evaluating sentiment analysis models under heterogeneous data settings. Experimental results demonstrate that FinSA-MoE consistently outperforms traditional deep learning models and existing financial LLMs across multiple evaluation metrics, highlighting the effectiveness of adaptive expert specialization for large-scale financial sentiment analysis.
 <p align="center">
   <img src="./img/FinSA-MoE.svg" width="600"/>
 </p>
 <p align="center">
-  Figure 1  Overall architecture of FinSA-MoE
+  Figure 1  Overall architecture of the proposed FinSA-MoE framework.
 </p>
 
 

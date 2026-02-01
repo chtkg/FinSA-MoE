@@ -6,7 +6,7 @@ FinSA-MoE (Financial Sentiment Analysis Mixture-of-Experts), a parameter-efficie
 <p align="center">
   <img src="./img/FinSA-MoE.svg" width="600"/>
 </p>
-<p align="center">
+<p align="left">
 Figure 1: Overall architecture of the proposed FinSA-MoE framework. (a) A frozen Transformerbased backbone encodes financial texts into shared semantic representations. (b) A Mixture-of-Experts router dynamically assigns domain-specific experts based on sentence-level features. (c) Each selected expert employs a LoRA adapter for single-expert fine-tuning to capture sentiment patterns in financial news and stock commentary.
 </p>
 

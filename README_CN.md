@@ -5,7 +5,7 @@
 ## 整体框架
 FinSA-MoE（Financial Sentiment Analysis Mixture-of-Experts，金融情感分析专家混合模型），这是一种参数高效的自适应专家专门化框架，旨在解决金融情感分析中的领域异质性问题（见图 I）。FinSA-MoE 基于共享的主干模型，通过 低秩适配（Low-Rank Adaptation，LoRA） 构建领域特定的专家，并采用 专家混合（Mixture-of-Experts，MoE）架构，以实现对异构金融文本来源的自适应专家选择。此外，我们还引入了 FinNF，这是一个大规模中文金融情感数据集，包含 166 万篇带有情感极性标注的金融新闻和股票评论。该数据集为在异质数据环境下评估情感分析模型提供了一个全面的基准。实验结果表明，FinSA-MoE 在多项评测指标上均稳定优于传统深度学习模型和现有的金融领域大语言模型，充分证明了自适应专家专门化机制在大规模金融情感分析任务中的有效性。
 <p align="center">
-  <img src="./img/FinSA-MoE.svg" width="600"/>
+  <img src="./img/FinSA-MoE.png" width="600"/>
 </p>
 <p align="left">
   图 1  所提出的 FinSA-MoE 框架的整体架构。（a）一个冻结的、基于 Transformer 的主干模型将金融文本编码为共享的语义表示；（b）专家混合（MoE）路由器基于句子级特征，动态分配领域特定的专家；（c）每个被选中的专家均采用LoRA 适配器进行单专家微调，以捕捉金融新闻和股票评论中的情感模式。

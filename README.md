@@ -6,7 +6,7 @@ FinSA-MoE (Financial Sentiment Analysis Mixture-of-Experts), a parameter-efficie
 <p align="center">
   <img src="./img/FinSA-MoE.png" width="600"/>
 </p>
-<p align="left">
+<p align="center">
 Figure 1: Overall architecture of the proposed FinSA-MoE framework.
 </p>
 

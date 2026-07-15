@@ -23,7 +23,7 @@ The FinNF dataset can be downloaded from the following sources:<br>
 👉 [Baidu Netdisk](https://pan.baidu.com/s/1P7tps9G-8rcEBrslOTyXtQ?pwd=8888)|Extraction code：8888<br>
 
 ### 📊 Dataset Statistics 📊
-We split the news dataset and the stock forum dataset using ratios of 98%/1%/1% and 60%/20%/20%, respectively. The sentiment polarity distribution of the FinNF dataset is shown in Figure 2.
+We split the news dataset and the stock forum dataset using ratios of 98%/1%/1% and 80%/10%/10%, respectively. The sentiment polarity distribution of the FinNF dataset is shown in Figure 2.
 <p align="center">
   <img src="./img/data.png" width="600"/>
 </p>

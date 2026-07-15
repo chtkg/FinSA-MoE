@@ -26,9 +26,9 @@ FinNF 数据集可通过以下途径下载：<br>
 👉 [百度网盘](https://pan.baidu.com/s/1P7tps9G-8rcEBrslOTyXtQ?pwd=8888)|提取码：8888<br>
 
 ### 📊 数据集统计📊
-我们分别对新闻和股评数据集采用98%/1%/1%与60%/20%/20% 的划分比例。FinNF 数据集的情绪极性分布见图2：
+我们分别对新闻和股评数据集采用98%/1%/1%与80%/10%/10% 的划分比例。FinNF 数据集的情绪极性分布见图2：
 <p align="center">
-  <img src="./img/Data.png" width="600"/>
+  <img src="./img/data.png" width="600"/>
 </p>
 <p align="center">
   图 2  FinNF数据集情绪极性分布

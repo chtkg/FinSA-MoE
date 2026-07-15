@@ -4,7 +4,7 @@ English | [简体中文](./README_CN.md)
 ## Overall Framework
 FinSA-MoE (Financial Sentiment Analysis Mixture-of-Experts), a parameter-efficient adaptive expert specialization framework designed for financial sentiment analysis under domain heterogeneity(see Fig.1). This framework introduces domain-specific experts tailored for financial news and stock commentary via LoRA fine-tuning, combined with a Mixture-of-Experts (MoE) architecture that dynamically routes inputs to the most relevant expert, enhancing cross-domain generalization in heterogeneous financial text sources. We also introduce the FinNF dataset, which includes 1.66 million high-quality financial news articles and stock commentary annotated with sentiment polarity, providing a comprehensive benchmark for evaluating the FinSA-MoE framework. Experimental results demonstrate that FinSA-MoE outperforms traditional deep learning models and existing financial LLMs across multiple evaluation metrics, including accuracy, precision, recall, and F1 score, and demonstrates robustness and cross-domain generalization in high-noise, semantically ambiguous settings.
 <p align="center">
-  <img src="./img/FinSA-MoE.svg" width="600"/>
+  <img src="./img/figure1.png" width="600"/>
 </p>
 <p align="center">
 Figure 1: Overall architecture of the proposed FinSA-MoE framework.
